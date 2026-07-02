@@ -1,0 +1,13 @@
+/index.php / 301
+/:page.php /:page.html 301
+/about /about.html 200
+/blog /blog.html 200
+/contact /contact.html 200
+/pdp /pdp.html 200
+/presentation /presentation.html 200
+/project /project.html 200
+/project-detail /project-detail.html 200
+/services /services.html 200
+/testimonial /testimonial.html 200
+/trial /trial.html 200
+/ /index.html 200

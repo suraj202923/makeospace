@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Aligned PDF Viewer</title>
+    <!-- Include PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <style>
+        /* Center align the viewer */
+        #pdf-viewer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust height as needed */
+            background-color: #f0f0f0; /* Optional: Background color */
+        }
+        /* Optional: Style for individual canvas */
+        
+    </style>
+</head>
+<body>
+    <div id="pdf-viewer">
+        <!-- This div will be dynamically populated with canvas elements -->
+    </div>
+
+    <script>
+        // Initialize PDF.js viewer
+        const pdfViewer = document.getElementById('pdf-viewer');
+        const pdfUrl = '/data/MAKEOSPACE-PRESENTATION.pdf'; // Replace with your PDF URL
+
+        // Load PDF document
+        pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
+            // Fetch all pages
+            const numPages = pdfDoc.numPages;
+            const pagesPromises = [];
+
+            for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+                pagesPromises.push(pdfDoc.getPage(pageNum));
+            }
+
+            Promise.all(pagesPromises).then(function(pages) {
+                // Render each page on a separate canvas
+                pages.forEach(function(page, pageNum) {
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale });
+
+                    // Prepare canvas for each page
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    // Render PDF page into canvas context
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext);
+
+                    // Append canvas to viewer container
+                    pdfViewer.appendChild(canvas);
+                });
+            });
+        }).catch(function(error) {
+            console.error('Error loading PDF:', error);
+        });
+    </script>
+</body>
+</html>
