@@ -1,0 +1,252 @@
+/*--------------------------------------------------------------------- 
+File Name: responsive.css 
+---------------------------------------------------------------------*/
+
+@media (min-width: 1343px) and (max-width: 1500px) {
+
+  .owl-next {right:  -9%;}
+  .owl-prev {left: -9%;}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+  .full_bg {height: 100%; }
+  .owl-carousel .owl-nav button.owl-next, 
+  .owl-carousel .owl-nav button.owl-prev {top: 95%;}
+  .owl-next {right:  0%;}
+  .owl-prev {left: 0%;}
+  .creative::before {right: 0;}
+.creative::after {right: 0;}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .site-navbar ul li a {padding:0px 23px;}
+  .full_bg {height: 100%; }
+  .owl-carousel .owl-nav button.owl-next, 
+  .owl-carousel .owl-nav button.owl-prev {top: 95%;}
+  .owl-next {right:  0%;}
+  .owl-prev {left: 0%;}
+  .creative::before {position: inherit; background: inherit;}
+.creative::after {position: inherit; background: inherit;}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.full_bg {height: 100%;}
+  .logo a img {padding-right: 7px;}
+  .site-navbar ul li a {padding:0px 10px; font-size: 17px;}
+.creative h1 {
+    font-size: 31px;
+    line-height: 39px;
+}
+.creative::before {position: inherit; background: inherit;}
+.creative::after {position: inherit; background: inherit;}
+ .owl-carousel .owl-nav button.owl-next, 
+  .owl-carousel .owl-nav button.owl-prev {top: 95%;}
+  .owl-next {right:  0%;}
+  .owl-prev {left: 0%;}
+  .titlepage h2 {
+    font-size: 21px;
+    line-height: 27px;}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .d_none {display: none;}
+  .full_bg {height: 100%;}
+  .site-navbar ul li a {padding: 8px 9px; font-size: 16px;}
+.creative h1 {padding-top: 30px;}
+.creative::before {position: inherit; background: inherit;}
+.creative::after {position: inherit; background: inherit;}
+  .owl-carousel .owl-nav button.owl-next, 
+  .owl-carousel .owl-nav button.owl-prev {top: 95%;}
+  .owl-next {right:  0%;}
+  .owl-prev {left: 0%;}
+  .innva_img, .map-responsive, 
+  .market_img, .secret_img {padding-top: 30px;}
+  .services_box h3 {font-size: 20px; line-height: 25px;}
+.grid {display: grid;}
+.older {order: -1;}
+.main_form {max-width: inherit;}
+
+    /* navbar css for mobile start */
+    .navbar-area {
+    margin-top: -47px;
+    }
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        z-index: 99999;
+    }
+    .site-navbar {
+    min-height: 50px;
+   }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+    /* navbar css for mobile end */
+
+}
+
+@media (max-width: 575px) {
+  .d_none {display: none;}
+  .full_bg {height: 100%;}
+  .site-navbar ul li a {padding: 8px 9px; font-size: 16px;}
+.creative h1 {
+    padding-top: 30px;
+    font-size: 40px;
+    line-height: 45px;
+}
+.creative::before {position: inherit; background: inherit;}
+.creative::after {position: inherit; background: inherit;}
+  .owl-carousel .owl-nav button.owl-next, 
+  .owl-carousel .owl-nav button.owl-prev {top: 95%;}
+  .owl-next {right:  0%;}
+  .owl-prev {left: 0%;}
+  .innva_img, .map-responsive, 
+  .market_img, .secret_img {padding-top: 30px;}
+.grid {
+    display: grid;
+  }
+.older {
+    order: -1;
+  }
+.titlepage h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+.main_form {max-width: inherit;}
+ul.conta li {padding-bottom: 10px;}
+.newslatter_form, ul.conta {display: inherit;}
+.subs_btn {
+  margin-left: 0;
+}
+    /* navbar css for mobile start */
+.navbar-area {
+    margin-top: -47px;
+    }
+    /*.nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        z-index: 99999;
+    }*/
+    
+    
+  
+}
+
+
+
+@media (max-width: 767px){
+  .full_bg {
+    margin-top: 95px;
+}
+.slider_main .carousel-indicators {
+    bottom: 15px;
+}
+#banner1 .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 40px;
+    border: #dc8100 solid 2px;
+}
+#banner1 .carousel-indicators .active {
+    width: 15px;
+    height: 15px;
+    border: #2e2929 solid 2px;
+}
+.mk-about {
+    padding-top: 20px;
+}
+.mk-about .titlepage {
+    padding-top: 20px;
+}
+  .nav-toggler {
+        display: block;
+        position: absolute;
+        top: -50px;
+        right: 15px;
+        z-index: 99999;
+    }
+    .site-navbar {
+        min-height: 0px;
+    }
+  .site-navbar.open{
+         min-height: 100vh; 
+    }
+    .menu-wrap{display: none;}
+    .site-navbar.open .menu-wrap {
+          /*max-height: 100vh;*/
+          display: block;
+          overflow: visible;
+      }
+      .site-navbar .main-menu {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        /*top: 30px;*/
+        top:15px;
+        flex-direction: column;
+        align-items: center;
+        /*background-color: #fff;*/
+      background: #262626;
+        box-shadow: 3px 0 21px rgba(13, 3, 3, 0.10);
+        /*max-height: 0;*/
+        overflow: hidden;
+        transition: .3s;
+        z-index: 99999;
+    
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+      .site-navbar .main-menu li a {
+        padding: 14px 25px 10px 35px;
+    }
+        ul.social_icon {
+        margin: 0;
+        position: absolute;
+        top: 210px;
+        left: 30px;
+        z-index: 99999;
+    }
+    ul.social_icon li a{line-height: 20px;}
+    .conta {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer {
+      padding-top: 40px;
+  }
+  .conta .c-block {
+    text-align: center;
+      border: 0;
+      width: 98%;
+      padding: 10px 0;
+  }
+  .conta .c-block:not(:last-of-type) {
+      border-bottom: 1px solid #705f5f;
+      padding: 15px 0 15px 0;
+  }
+  .copyright {
+      margin-top: 40px;
+  }
+
+}
+@media (max-width: 320px){
+    .full_bg {
+      margin-top: 86px;
+  }
+    .logo a img {
+      padding-right: 50px;
+  }
+}
